@@ -21,4 +21,5 @@ interface IDelegate {
     fun getOptionsMenuId(): Int
     fun getToolbar(): Toolbar?
     fun getRootView(): View
+    fun initWidget()
 }

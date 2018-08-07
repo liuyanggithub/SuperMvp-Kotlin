@@ -6,6 +6,7 @@ import android.view.View
 import com.ly.supermvp.adapter.MainPagerAdapter
 import com.ly.supermvp.base.ActivityPresenter
 import com.ly.supermvp.delegate.MainActivityDelegate
+import com.orhanobut.logger.Logger
 
 class MainActivity : ActivityPresenter<MainActivityDelegate>(), View.OnClickListener {
     var mMainPagerAdapter: MainPagerAdapter? = null
@@ -24,6 +25,8 @@ class MainActivity : ActivityPresenter<MainActivityDelegate>(), View.OnClickList
     override fun initData() {
         super.initData()
         mMainPagerAdapter = MainPagerAdapter(supportFragmentManager, this)
+        Logger.d("-----------------------${1/2}")
+        Logger.i("-----------------------${1/2}")
     }
 
     override fun initView() {

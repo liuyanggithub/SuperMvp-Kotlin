@@ -37,6 +37,8 @@ class RetrofitService private constructor(){
         @JvmStatic
         private var baiduAPI: BaiduAPI? = null
         @JvmStatic
+        private var showAPI: ShowAPI? = null
+        @JvmStatic
         private var mOkHttpClient: OkHttpClient? = null
 
 
@@ -45,6 +47,25 @@ class RetrofitService private constructor(){
         }
     }
 
+    /**
+     * 易源api
+     */
+    fun createShowAPI(): ShowAPI? {
+        if (showAPI == null) {
+            synchronized(RetrofitService::class.java) {
+                if (showAPI == null) {
+                    initOkHttpClient()
+                    showAPI = Retrofit.Builder()
+                            .client(mOkHttpClient)
+                            .baseUrl(BizInterface.SHOW_API)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                            .build().create(ShowAPI::class.java)
+                }
+            }
+        }
+        return showAPI
+    }
 
     fun createBaiduAPI(): BaiduAPI? {
         if (baiduAPI == null) {

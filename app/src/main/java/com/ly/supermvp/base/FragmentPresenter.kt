@@ -41,6 +41,7 @@ open abstract class FragmentPresenter<T : IDelegate>: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewDelegate?.initWidget()
         initData()
         initView()
         bindEvenListener()

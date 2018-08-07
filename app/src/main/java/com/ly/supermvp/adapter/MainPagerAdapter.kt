@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import com.ly.supermvp.R
+import com.ly.supermvp.view.fragment.NewsFragment
 import com.ly.supermvp.view.fragment.WeatherFragment
 
 /**
@@ -25,7 +26,7 @@ class MainPagerAdapter(fm: FragmentManager?, context: Context?) : FragmentPagerA
 
     override fun getItem(position: Int): Fragment {
         return when(position) {
-            0 -> WeatherFragment.newInstance()
+            0 -> NewsFragment.newInstance()
             else -> WeatherFragment.newInstance()
         }
     }

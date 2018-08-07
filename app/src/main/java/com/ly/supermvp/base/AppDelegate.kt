@@ -43,6 +43,9 @@ abstract class AppDelegate: IDelegate {
         return null
     }
 
+    override fun initWidget() {
+    }
+
     override fun getRootView(): View {
         return mRootView!!
     }
