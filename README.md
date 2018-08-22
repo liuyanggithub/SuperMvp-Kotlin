@@ -1,5 +1,5 @@
 #  SuperMvp-Kotlin
-## **otlin版本+MVP + RxJava + Retrofit + Glide + Material Design**
+## **kotlin版本+MVP + RxJava + Retrofit + Glide + Material Design**
 
 ## **简介**
 全新的kotlin版本，一款遵循**Material Design**风格的新闻，美图，天气查询应用
