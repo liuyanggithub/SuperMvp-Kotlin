@@ -119,6 +119,7 @@ public class NewsListAdapter() : Adapter<RecyclerView.ViewHolder>() {
         }
 
     }
+
 }
 /**
  * 点击条目接口
